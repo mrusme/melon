@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+logo: melon-logo.png
+title: Melon
+description: Melon is a daemon that allows linking media devices (e.g. Sonos, Televisions) and operating them through one API
+show_downloads: "true"
+google_analytics: UA-42605714-4
