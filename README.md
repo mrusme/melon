@@ -15,8 +15,6 @@ Melon – **M**ultimedia- & **E**ntertainment **L**inking and **O**peration **N*
 On your Raspberry:
 
 ```bash
-$ raspi-config nonint do_spi 0
-$ reboot
 $ aptitude install python3 python3-pip python3-dev python3-spidev
 $ pip3 install gunicorn falcon ujson
 $ # For controlling Samsung TVs:
