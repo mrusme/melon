@@ -1,0 +1,35 @@
+#!/bin/sh
+#/etc/init.d/melon
+
+### BEGIN INIT INFO
+# Provides:          melon
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Startups script for melon.py
+# Description:       https://github.com/mrusme/melon
+### END INIT INFO
+
+if [ -f /etc/melon ]
+then
+    . /etc/melon
+fi
+
+case "$1" in
+    start)
+        echo "Starting melon"
+        nohup /opt/melon/melon.sh &
+        ;;
+    stop)
+        echo "Stopping melon"
+        kill $(ps aux | grep "[l]emon" | awk '{ print $2 }')
+        kill $(ps aux | grep "[g]unicorn" | awk '{ print $2 }')
+        ;;
+    *)
+        echo "Usage: /etc/init.d/melon {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
