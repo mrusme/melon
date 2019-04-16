@@ -30,7 +30,4 @@ class MiddlewareJson(object):
         if 'response' not in resp.context:
             return
 
-        resp.body = json.dumps(
-            resp.context['response'],
-            default=json_serializer
-        )
+        resp.body = json.dumps(resp.context['response'])
