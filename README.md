@@ -16,7 +16,7 @@ On your Raspberry:
 
 ```bash
 $ aptitude install python3 python3-pip python3-dev python3-spidev
-$ pip3 install gunicorn falcon ujson
+$ pip3 install gunicorn falcon ujson tinydb
 $ # For controlling Samsung TVs:
 $ pip3 install samsungctl
 $ # For controlling Sonos speakers:
