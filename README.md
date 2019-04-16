@@ -23,6 +23,8 @@ $ # For controlling Sonos speakers:
 $ pip3 install soco
 $ # For controlling Philips Hue:
 $ pip3 install phue
+$ # For controlling anything IrDA related:
+$ pip3 install py_irsend
 $ cd /opt
 $ git clone https://github.com/mrusme/melon.git
 $ ln -s /opt/melon/init.d/melon /etc/init.d/melon
